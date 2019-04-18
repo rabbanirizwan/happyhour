@@ -7,6 +7,7 @@
     padding-right: 20px;
     padding-top: 5px;
     font-family: 'Chewy', cursive;
+    
 }
 .second-nav{
     display: flex;
@@ -15,8 +16,28 @@
     font-size: 13px;
     justify-content: space-around;
     flex-wrap: wrap;
-    border-bottom: 1px solid gray;
+   
     padding-top: 6px;
+    background-color: white;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+.second-nav p a{
+    
+    text-decoration: none;
+    color: black;
+}
+.second-nav p{
+   border-bottom: 1px solid grey;
+}
+.second-nav p:hover{
+    color: #ed8707;
+    
+}
+.sticky-bottom{
+    position: sticky;
+    bottom: 0px;
+    z-index: 1020;
 }
 .second-nav > p,{
     margin: 0px
@@ -62,8 +83,20 @@
 footer{
     display: flex;
     justify-content: space-around;
+    border-top: 1px solid wheat;
+    background-color: white;
+    padding-top: 19px;
+}
+footer div p i {
+    font-size: 20px;
+}
+footer div{
+    text-align: center;
 }
 
+section{
+    padding-top: 30px;
+}
 @media only screen and (min-width:1000px)
 {
     .first-place{
