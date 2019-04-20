@@ -21,7 +21,7 @@ localStorage.setItem("lastname", position.coords.latitude);
    alert("fail");
  }
 
-var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
@@ -67,8 +67,8 @@ var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStora
 function food1(parameter) {
     document.getElementById("places").innerHTML = " ";
 
-console.log(localStorage.getItem("lastname"));
-var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+
+var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
@@ -109,7 +109,7 @@ var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStora
 function food2(parameter) {
     document.getElementById("places").innerHTML = " ";
 
-    var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+    var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
@@ -195,7 +195,7 @@ function food4() {
 
     document.getElementById("places").innerHTML = " ";
 
-    var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+    var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
@@ -236,7 +236,7 @@ function food5() {
 
     document.getElementById("places").innerHTML = " ";
 
-    var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+    var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
@@ -277,7 +277,7 @@ function food5() {
 function food6() {
  document.getElementById("places").innerHTML = " ";
 
-    var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
+    var pyrmont = new google.maps.LatLng(parseFloat(localStorage.getItem("latitude")),parseFloat(localStorage.getItem("longitude")));
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
