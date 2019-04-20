@@ -79,8 +79,7 @@
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
       var map;
-      var index=0;
-     type=['store','restaurant'];
+     type=['store'];
       function initMap() {
               navigator.geolocation.getCurrentPosition(success,fail);
 
@@ -106,22 +105,18 @@ var longitude = position.coords.longitude;
           if (getNextPage) getNextPage();
         };
 
-
-
-
         // Perform a nearby search.
         service.nearbySearch(
-            {location: pyrmont, radius: 500, type: type[1]},
+            {location: pyrmont, radius: 500, type: type},
             function(results, status, pagination) {
               if (status !== 'OK') return;
-            // console.log(results);
+
               createMarkers(results);
               moreButton.disabled = !pagination.hasNextPage;
               getNextPage = pagination.hasNextPage && function() {
                 pagination.nextPage();
               };
             });
-
 
 }
 function fail()
@@ -148,20 +143,12 @@ function fail()
             map: map,
             icon: image,
             title: place.name,
-            position: place.geometry.location,
-            vicinity:place.vicinity
-            //open:place.opening_hours.open_now=true      
+            position: place.geometry.location
           });
 
           var li = document.createElement('li');
           li.textContent = place.name;
-         //console.log(place.opening_hours.open_now);
-         placesList.appendChild(li);
-
-          var div = document.createElement('div');
-          div.textContent =place.vicinity;
-         // placesList.appendChild(div);
-
+          placesList.appendChild(li);
 
           bounds.extend(place.geometry.location);
         }
@@ -179,4 +166,3 @@ function fail()
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy1iAAVvW9l0HXJ3MXipB2x6YvofjTU6o&libraries=places&callback=initMap" async defer></script>
   </body>
 </html>
-

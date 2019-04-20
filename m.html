@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:700i" rel="stylesheet"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+    
+  <body>
+ 
+      <!--<ul id="places"></ul>-->
+      
+    <header>
+    
+        <div class="first-nav"> 
+               <p><i class="far fa-star"></i></p> 
+            <p> HappyHour</p> 
+            <p><i class="fas fa-info-circle"></i></p>
+       </div>
+        
+    </header>
+
+       <div class="second-nav sticky-top">
+           
+          <p id = "one" >  <a  onclick="food1(parameter)" href="#food">Food</a> </p>
+           <p id = "two"> <a href="#Drinks" onclick="food2(parameter)">Drinks</a></p>
+           <p id = "three"> <a  href="#Activities" onclick="food3(parameter)">Activities</a></p>
+           <p id = "four"> <a  href="#Beauty" onclick="food4(parameter)">Beauty & Spas</a></p>
+           <p id = "five"> <a  href="#Shop" onclick="food5(parameter)">Shop</a></p>
+           <p id = "six"> <a  href="#travel" onclick="food6(parameter)">Travel</a> </p>
+
+       </div>
+    <div id="map"></div>
+    <section id="places"> 
+   
+    </section>
+
+    <footer class="sticky-bottom">
+    
+    <div>
+          <a href="index.html">  <p><i class="fas fa-plus"></i></p>
+            <p>Near me</p></a>
+    
+    </div>
+    <div>
+            <p><i class="fas fa-map-pin"></i></p>
+            <p>Map</p>
+           
+    </div>
+    <div>
+           <a href="search.html"> <p><i class="fas fa-search"></i></p>
+            <p>Search</p></a>
+           
+    </div>   
+    <div>
+            <p><i class="fas fa-location-arrow"></i></p>
+            <p>locations</p>
+        
+    </div>
+    <div>
+            <p><i class="far fa-heart"></i></p>
+            <p>favourite</p>
+    </div>   
+        
+</footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy1iAAVvW9l0HXJ3MXipB2x6YvofjTU6o&libraries=places&callback=initMap" async defer></script>
+  <script src="script.js" type="text/javascript"></script>
+  
+  </body>
+</html>
+
+
+<script>
+//   var parameter=0;
+//     var map;
+// var service;
+// var infowindow;
+
+
+// var type =['restaurant','bar'];
+// function initMap() {
+//      navigator.geolocation.getCurrentPosition(success,fail);
+//   function success(position)
+//  {
+//    var latitude = position.coords.latitude;
+// var longitude = position.coords.longitude;
+// var pyrmont = new google.maps.LatLng(latitude,longitude);
+
+//   map = new google.maps.Map(document.getElementById('map'), {
+//       center: pyrmont,
+//       zoom: 15
+//     });
+
+// console.log(window.parameter);
+
+//   var request = {
+//     location: pyrmont,
+//     radius: '500',
+//     type: type[parameter]
+//   };
+
+//   service = new google.maps.places.PlacesService(map);
+//   service.nearbySearch(request, callback);
+
+//  }
+//  function fail()
+//  {
+//    alert("fail");
+//  }
+
+  
+// }
+
+// function callback(results, status) {
+//   if (status == google.maps.places.PlacesServiceStatus.OK) {
+//     for (var i = 0; i < results.length; i++) {
+//       var place = results[i];
+      
+//       createMarker(results[i]);
+//      // createPhoto(place);
+//     }
+//   }
+// }
+// function createMarker(place) {
+//   var photos = place.photos;
+//   var i=0;
+//         var marker = new google.maps.Marker({
+//           map: map,
+//           position: place.geometry.location
+//         });
+
+//         google.maps.event.addListener(marker, 'click', function() {
+//           infowindow.setContent(place.name);
+//           infowindow.open(map, this);
+//         });
+//         //console.log(place.name);
+//         //console.log(place);
+//   if (!photos) {
+//      return;
+//   }
+
+
+//         document.getElementById("places").innerHTML +=  `<div class="first-place">
+//         <div style = "background-image:url(${photos[i].getUrl()});" id="first-place-img"></div>
+//         <div class="inner-style">
+//             <p class="foodway"> ${place.name} <br><small>${place.rating}</small></p>
+//             <div class="inner-style1">
+//                   <p><i class="fas fa-map-marker-alt"></i>
+//                       ${place.vicinity}</p>
+//                   <p style="color:#ed8707; padding-left: 27px;">Next deal 3pm to 7pm </p>
+//             </div>
+          
+//             </div>
+//           </div>
+        
+//         `;
+        
+//       }
+//  function createPhoto(place) {
+//   var photos = place.photos;
+// var i=0;
+//    if (!photos) {
+//      return;
+//   }
+//    var img = document.createElement("img");
+ 
+//    //for (var i=0;i<photos.length;i++){
+//     img.src = photos[i].getUrl({'maxWidth': 100, 'maxHeight': 100});
+//     //document.getElementById("img-container").appendChild(img.cloneNode(true));
+//     document.getElementById("first-place-img").style.backgroundImage='url(photos[i].getUrl())'; 
+//     console.log(photos[i].getUrl());
+//     i++;
+//   // }
+//  }
+
+
+
+
+    </script>
+  

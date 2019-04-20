@@ -48,13 +48,13 @@
     justify-content: space-between;
     border-bottom: 1px solid gray;   
 }
-.first-place-img{
+#first-place-img{
     /* background-image: url("index.jpg");
     background-size: cover;
     height: 132px;
     width: 134px; */
-    background-image: url(index.jpg);
-    background-repeat: no-repeat;
+    /*background-image: url(https://lh3.googleusercontent.com/p/AF1QipPsLMNtsRHeu2BDyKTa1HtCg8cqz9JMe4asXo_f=s1600-w2448);
+    */background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 200px;
