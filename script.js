@@ -21,7 +21,23 @@ localStorage.setItem("lastname", position.coords.latitude);
    alert("fail");
  }
 
+var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
 
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+    });
+
+
+
+  var request = {
+    location: pyrmont,
+    radius: '1000',
+    type: ['restaurant']
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
 
 
   
@@ -49,6 +65,8 @@ localStorage.setItem("lastname", position.coords.latitude);
 
 
 function food1(parameter) {
+    document.getElementById("places").innerHTML = " ";
+
 console.log(localStorage.getItem("lastname"));
 var pyrmont = new google.maps.LatLng(localStorage.getItem("latitude"),localStorage.getItem("longitude"));
 

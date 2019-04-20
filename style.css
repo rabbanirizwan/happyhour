@@ -97,6 +97,12 @@ footer div{
 section{
     padding-top: 30px;
 }
+.second-nav #one{
+    border-bottom: 1px solid orangered;
+}
+.second-nav #one a{
+    color: orangered;
+}
 @media only screen and (min-width:1000px)
 {
     .first-place{
